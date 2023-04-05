@@ -1,9 +1,27 @@
 <script setup >
+import {ref} from 'vue'
+let name = ref('张三');
+let age = ref(18)
+let job = ref({
+  type:'xxx',
+  salary:'30k'
+})
+function showname(){
+  name.value = '李四'
+  age.value=29
+  console.log(job.value);
+  console.log(name,age);
+}
 </script>
 
 <template>
   <div>
-   
+    <p>{{ name }}</p>
+    <br>
+    <p>{{ age }}</p>
+    <h1>{{ job.type }}</h1>
+    <h1>{{ job.salary }}</h1>
+    <div @click="showname">确定 </div>
   </div>
 </template>
 
