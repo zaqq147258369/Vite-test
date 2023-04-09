@@ -39,9 +39,9 @@ function deletesalay(){
     <h1 v-show="job.salary">收入：{{ job.salary }}</h1>
     <h1>{{ job.a.b.c }}</h1>
     <h1 v-show="job.sex">性别：{{ job.sex }}</h1>
-    <div @click="showname">确定 </div>
-    <div @click="addsex">添加sex属性 </div>
-    <div @click="deletesalay">删除salary属性 </div>
+    <button @click="showname">确定 </button>
+    <button @click="addsex">添加sex属性 </button>
+    <button @click="deletesalay">删除salary属性 </button>
   </div>
 </template>
 
