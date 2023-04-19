@@ -1,6 +1,6 @@
 <script setup>
-import {reactive,computed} from "vue"
-
+import {ref,reactive,computed,watch} from "vue"
+    let sum = ref(0)
 let person = reactive({
     firstName:"张",
     lastName:'三'
@@ -22,6 +22,10 @@ person.fullName = computed({
     } 
 })
 
+watch(sum,(newValue,oldValue)=>{
+    console.log('sum变了',newValue,oldValue)
+},{immedite:true})
+
 </script>
 <template>
     <div>
@@ -31,8 +35,9 @@ person.fullName = computed({
         名: <input type="text" v-model="person.lastName">
         <br>
         <span>全名：{{person.fullName}}</span>
+        <h1>和：{{ sum }}}</h1>
+        <button @click="sum++">+</button>
     </div>
-   
 </template>
 <style scoped>
 
