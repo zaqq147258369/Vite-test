@@ -1,5 +1,5 @@
 <script setup>
-import {ref,reactive,computed,watch} from "vue"
+import {ref,reactive,computed,watch,watchEffect} from "vue"
     let sum = ref(0)
 let person = reactive({
     firstName:"张",
@@ -55,6 +55,12 @@ watch([()=>person.job,()=>person.lastName],(newValue,oldValue)=>{
 },{deep:true});       //此处由于监视的是reactive定义的对象中的某个属性，所以deep有效
 
 */
+
+watchEffect(()=>{
+    const x1 = sum.value;
+    
+})
+
 
 </script>
 <template>
