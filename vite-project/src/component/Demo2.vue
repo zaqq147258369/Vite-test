@@ -71,7 +71,7 @@ watchEffect(()=>{
         名: <input type="text" v-model="person.lastName">
         <br>
         <span>全名：{{person.fullName}}</span>
-        <h1>和：{{ sum }}}</h1>
+        <h1>和：{{ sum }}</h1>
         <button @click="sum++">+</button>
     </div>
 </template>
