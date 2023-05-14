@@ -14,6 +14,7 @@ let job = reactive({
 function showname(){
   name.value = '李四'
   age.value=29
+  
   console.log(job);
   job.type = 'aaa';
   job.salary='49k';
